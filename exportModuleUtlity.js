@@ -5,8 +5,8 @@ client.connect();
 module.exports.connectDatabase = function () {
     MongoClient.connect(url, function (err, client) {
         if (err) throw err;
-        let db = client.db('records');
-        db.collection('collections').find().toArray(function (err, result) {
+        let db = client.db('Assignment1');
+        db.collection('Assignment1').find().toArray(function (err, result) {
             if (err) throw err;
             console.log(result);
             client.close();
